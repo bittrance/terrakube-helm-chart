@@ -217,6 +217,9 @@ api:
     create: false
     roleName: "terrakube-api-role"
     roleBindingName: "terrakube-api-role-binding"
+  ephemeralExecution:
+    enabled: false
+    secretName: terrakube-executor-secrets
   secrets:
    - terrakube-api-secrets
   resources: {}
@@ -233,7 +236,7 @@ api:
   initContainers: []
   startupProbe:
     failureThreshold: 30
-    periodSeconds: 10
+    periodSeconds: 5
   readinessProbe:
     periodSeconds: 10
   livenessProbe:
@@ -296,7 +299,7 @@ executor:
   initContainers: []
   startupProbe:
     failureThreshold: 30
-    periodSeconds: 10
+    periodSeconds: 5
   readinessProbe:
     periodSeconds: 10
   livenessProbe:
@@ -333,7 +336,7 @@ registry:
   initContainers: []
   startupProbe:
     failureThreshold: 30
-    periodSeconds: 10
+    periodSeconds: 5
   readinessProbe:
     periodSeconds: 10
   livenessProbe:
