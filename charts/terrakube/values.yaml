@@ -235,10 +235,8 @@ api:
     failureThreshold: 30
     periodSeconds: 10
   readinessProbe:
-    initialDelaySeconds: 120
     periodSeconds: 10
   livenessProbe:
-    initialDelaySeconds: 10
     periodSeconds: 10
   cache:
     moduleCacheMaxTotal: "128"
@@ -300,10 +298,8 @@ executor:
     failureThreshold: 30
     periodSeconds: 10
   readinessProbe:
-    initialDelaySeconds: 120
     periodSeconds: 10
   livenessProbe:
-    initialDelaySeconds: 10
     periodSeconds: 10
 
 ## Registry properties
@@ -339,10 +335,8 @@ registry:
     failureThreshold: 30
     periodSeconds: 10
   readinessProbe:
-    initialDelaySeconds: 120
     periodSeconds: 10
   livenessProbe:
-    initialDelaySeconds: 10
     periodSeconds: 10
 
 ## UI Properties
